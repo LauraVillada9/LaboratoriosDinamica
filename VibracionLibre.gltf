@@ -186,13 +186,6 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "Material.008",
-            "pbrMetallicRoughness" : {
-                "metallicFactor" : 0
-            }
-        },
-        {
-            "doubleSided" : true,
             "name" : "Amortiguador",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
@@ -236,8 +229,7 @@
                         "NORMAL" : 1,
                         "TEXCOORD_0" : 2
                     },
-                    "indices" : 3,
-                    "material" : 0
+                    "indices" : 3
                 },
                 {
                     "attributes" : {
@@ -246,7 +238,7 @@
                         "TEXCOORD_0" : 6
                     },
                     "indices" : 7,
-                    "material" : 1
+                    "material" : 0
                 }
             ]
         },
@@ -272,8 +264,7 @@
                         "NORMAL" : 13,
                         "TEXCOORD_0" : 14
                     },
-                    "indices" : 15,
-                    "material" : 2
+                    "indices" : 15
                 },
                 {
                     "attributes" : {
@@ -282,7 +273,7 @@
                         "TEXCOORD_0" : 18
                     },
                     "indices" : 19,
-                    "material" : 2
+                    "material" : 1
                 },
                 {
                     "attributes" : {
@@ -291,7 +282,7 @@
                         "TEXCOORD_0" : 22
                     },
                     "indices" : 23,
-                    "material" : 3
+                    "material" : 2
                 }
             ]
         }
