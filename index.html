@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Vibracion</title>
+	<title>Vibración Libre</title>
 	<style>
 		body {
 			margin: 0;
@@ -17,11 +17,41 @@
 </head>
 
 <body>
+	
+	<h1 style=" color:rgb(5, 12, 12); width:100%; font-size: 200%; text-align: center;">
+	Vibración Libre 
+    </h1>
+	<form style="background-color:rgb(160, 160, 160)">
+	 <fieldset>
+	  <legend style="color: rgb(5, 10, 14);">Propiedades Físicas</legend>
+
+	  <label style="color: rgb(0, 0, 0);">Masa</label>
+	  <input type="text"; name="Masa"; id="nomest"; placeholder="[kg]"><br>
+
+	  <label style="color: rgb(10, 12, 14);">Rigidez</label>
+	  <input type="text"; name="Rigidez";id="nomest"; placeholder="[N/m]"><br>
+
+	  <label style="color: rgb(12, 15, 17);">Coeficiente de amortiguación</label>
+	  <input type="text"; name="amortiguación";id="nomest"; placeholder="[Ns/m]"><br>
+
+	  <label style="color: rgb(14, 16, 19);">Desplazamiento Inicial [m]</label>
+	  <input type="text"; name="DesInicial";id="nomest"; placeholder="[m]"><br>
+
+	  <label style="color: rgb(8, 10, 12);">Velocidad Inicial [m/s]</label>
+	  <input type="text"; name="VelInicial";id="nomest"; placeholder="[m/s]"><br>
+
+	  <center>
+		<button type="button"; onclick="">calcular</button>
+	  </center>
+	  
+	 </fieldset>
+
+	</form>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js"></script>
 
-	<script>
+	<script>		
 
 		var scene = new THREE.Scene();
 		var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -145,17 +175,7 @@ loader2.load(
 		console.log( 'An error happened' );
 	}
 );
-function createPanel() {
 
-const panel = new GUI( { width: 310 } );
-
-const folder1 = panel.addFolder( 'Visibility' );
-const folder2 = panel.addFolder( 'Activation/Deactivation' );
-const folder3 = panel.addFolder( 'Pausing/Stepping' );
-const folder4 = panel.addFolder( 'Crossfading' );
-const folder5 = panel.addFolder( 'Blend Weights' );
-const folder6 = panel.addFolder( 'General Speed' );
-};
 
 	</script>
 </body>
