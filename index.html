@@ -38,10 +38,10 @@
 		  <label style="color: rgb(12, 15, 17);">Coeficiente de amortiguamiento</label>
 		  <input type="text"; name="amortiguación";id="nomest"; placeholder="[Ns/m]"><br>
 	
-		  <label style="color: rgb(14, 16, 19);">Desplazamiento Inicial [m]</label>
+		  <label style="color: rgb(14, 16, 19);">Desplazamiento Inicial </label>
 		  <input type="text"; name="DesInicial";id="nomest"; placeholder="[m]"><br>
 	
-		  <label style="color: rgb(8, 10, 12);">Velocidad Inicial [m/s]</label>
+		  <label style="color: rgb(8, 10, 12);">Velocidad Inicial </label>
 		  <input type="text"; name="VelInicial";id="nomest"; placeholder="[m/s]"><br>
 	
 		  <center>
@@ -161,7 +161,6 @@ loader2.load(
 	
 
 
-
 	// called while loading is progressing
 	function ( xhr ) {
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
@@ -171,8 +170,15 @@ loader2.load(
 		console.log( 'An error happened' );
 	}
 );
+/*
+function animate() {
+			requestAnimationFrame(animate);
+			controls.update();
+				.position.y += 0.0002
+			renderer.render(scene, camera);
 
-
+		}
+animate() */
 	</script>
 </body>
 
