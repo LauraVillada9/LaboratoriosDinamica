@@ -90,45 +90,30 @@
 
 		const controls = new THREE.OrbitControls(camera, renderer.domElement);
 		camera.position.set(13, 6, -2);
-
 		controls.update();
-
-
 		renderer.render(scene, camera);
 
 		function animate() {
 			requestAnimationFrame(animate);
 			controls.update();
-
 			if (garra) {
-
 				if(garra.position.y<=0.29){
 					garra.position.y+=0.00001
 				}else{
-					garra.position.y=0.35
-
-					
+					garra.position.y=0.35	
 				}
 				console.log(garra.position.y)
-
-
 			}
-
 			renderer.render(scene, camera);
-
-		}
-		function createPanel(){
-			const panel = new GUI ({width : 310});
-			const folder1 = panel.addFolder( 'Visibility' );
 		}
 		animate()
 		
 		
 // Instantiate a loader
-const loader2 = new THREE.GLTFLoader();
+const loader1 = new THREE.GLTFLoader();
 
 // Load a glTF resource
-loader2.load(
+loader1.load(
 	'B.gltf',//'scene.gltf'
 	function ( gltf ) {
 		garra = gltf.scene; 
@@ -155,6 +140,7 @@ loader2.load(
 	}
 );
 // Load a glTF resource
+const loader2 = new THREE.GLTFLoader();
 loader2.load(
 	'M.gltf',//'scene.gltf'
 	function ( gltf ) {
@@ -172,6 +158,9 @@ loader2.load(
 		garra.position.y+=0.258
 
 	},
+	
+
+
 
 	// called while loading is progressing
 	function ( xhr ) {
@@ -183,6 +172,12 @@ loader2.load(
 	}
 );
 
+var animate = function() {
+	requestAnimationFrame( animate );
+	loader2.rotation.x += 0.01;
+	renderer.render( scene, camera );
+};
+animate();
 	</script>
 </body>
 
